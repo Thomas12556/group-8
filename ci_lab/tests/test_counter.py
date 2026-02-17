@@ -294,4 +294,5 @@ class TestCounterEndpoints:
 
         # attempt to modify the deleted counter
         response = client.put('/counters/deleted-modifiy-test/set/5')
-        assert response.status_code == HTTPStatus.NOT_FOUND
+        assert response.status_code == HTTPStatus.OK # intentionally fail this unit test by asserting the wrong value for debugging PR
+    
